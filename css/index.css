@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "montserrat", sans-serif;
+  src: url("/fonts/Montserrat-SemiBold.ttf") format(".ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat_light", sans-serif;
+  src: url("/fonts/Montserrat-Light.ttf") format(".ttf");
+  font-weight: light;
+  font-style: normal;
+}
+
+@keyframes changeBorderRadius {
+  0% {
+    border: 2px solid rgb(255, 255, 255);
+  }
+  100% {
+    border: 9px solid #b9c7dd;
+  }
+}
+
+main {
+  max-width: 1400px;
+}
+h3 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 33px;
+  margin: 3px 0;
+  padding-bottom: 15px;
+}
+
+.photo_user {
+  width: 245px;
+  height: 245px;
+  position: absolute;
+  top: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo_user_img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  animation: changeBorderRadius 1.5s infinite alternate;
+  transition: transform 0.6s ease;
+}
+
+.photo_user_img:hover {
+  transform: scale(1.08);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8fa69b;
+  min-height: 215px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profession {
+  font-family: "montserrat_light", sans-serif;
+  font-weight: 400;
+}
+.name {
+  font-family: "altera", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px 0 0 0;
+}
+
+.content {
+  font-family: "montserrat_light", sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  background-color: #edeff5;
+  padding: 100px 0 50px;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.hobby_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.hobby_list li {
+  padding: 5px 5px 6px 2px;
+  font-size: 21px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.it_img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b9c7dd;
+  background-image: url(../picture/code_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: cover;
+  margin: 0 5px 0 8px;
+}
+
+.fit_img {
+  background-image: url(../picture/fitness_center_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b9c7dd;
+  margin: 0 5px 0 8px;
+}
+
+.music_img {
+  background-image: url(../picture/music_note_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: cover;
+
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b9c7dd;
+  margin: 0 5px 0 8px;
+}
+.cook_img {
+  background-image: url(../picture/skillet_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: cover;
+
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b9c7dd;
+  margin: 0 5px 0 8px;
+}
+.fantasy_img {
+  background-image: url(../picture/menu_book_FILL0_wght400_GRAD0_opsz24.svg);
+  background-size: contain;
+
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b9c7dd;
+  margin: 0 5px 0 8px;
+}
+
+.knowlege {
+  background-color: #8fa69b;
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 250px);
+  gap: 3px;
+}
+
+.grid_item {
+  background-color: #b9c7dd;
+  transition: filter 0.3s ease;
+}
+
+.grid_item:hover {
+  filter: brightness(0.9);
+}
+
+.grid_item:nth-child(even) {
+  background-color: #edeff5;
+}
+
+.grid_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.skill {
+  font-size: 18px;
+  transition: font-size 0.3s ease;
+}
+.skill_rate {
+  font-size: 25px;
+  font-weight: 600;
+  transition: font-size 1s ease;
+}
+
+.grid_item:hover .skill {
+  font-size: 23px;
+}
+.grid_item:hover .skill_rate {
+  font-size: 55px;
+  color: #056500;
+}
+
+.grid_item:nth-child(3):hover .skill_rate {
+  color: #ce9700;
+}
+.grid_item:nth-child(2):hover .skill_rate {
+  color: blue;
+}
+.grid_item:nth-child(1):hover .skill_rate {
+  color: #00ce11;
+}
+
+.cat {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cat_richort {
+  background-image: url(../picture/photo_2023-11-16_17-27-42.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease;
+}
+
+.cat_title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cat_title_hov {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.cat_richort:hover {
+  transform: scale(1.96);
+  transform-origin: top;
+}
